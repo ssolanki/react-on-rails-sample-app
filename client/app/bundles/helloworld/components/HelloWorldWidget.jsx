@@ -26,6 +26,7 @@ export default class HelloWorldWidget extends React.Component {
   // React will automatically provide us with the event `e`
   handleChange(e) {
     const name = e.target.value;
+    console.log(name);
     this.props.updateName(name);
   }
 
@@ -36,6 +37,7 @@ export default class HelloWorldWidget extends React.Component {
         <h3>
           Hello, {name}!
         </h3>
+        <input className="form-control input-sm col-sm-4" type="text" onChange={this.handleChange}/>
       </div>
     );
   }
